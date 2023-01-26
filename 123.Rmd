@@ -1,0 +1,418 @@
+---
+title: "Vikas Singh's Resume"
+author: Vikas Singh 
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: false
+# uncomment this line to produce HTML and PDF in RStudio:
+knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(ggplot2)
+library(plotly)
+library(datadrivencv)
+library(tidyverse)
+library(dplyr)
+library(glue)
+library(magrittr) # For the pipe
+```
+Aside
+================================================================================
+
+Contact Info {#contact}
+--------------------------------------------------------------------------------
+- <i class="fa fa-home"></i> 287 Rue d'Alco, 34080 Montpellier, France, 34080 Montpellier
+- <i class="fa fa-envelope"></i> v.vikas@montpellier-bs.com
+- <i class="fa fa-github"></i> [github.com/vikass14](https://github.com/vikass14)
+- <i class="fa fa-phone"></i> +33 075-413-2021
+- <i class ="fa fa-linkedin"></i>("https://www.linkedin.com/in/vikas-singh-8323455a/")
+
+
+Soft Skills {#soft}
+-------------------------------------------------------------------------------
+Scientific 
+Innovator 
+Practical
+Organizational 
+Conciliator
+
+
+Research Skills {#skills}
+--------------------------------------------------------------------------------
+### Qualititative Research Approach
+- Grounded Theory
+- Phenomenological Research
+
+### Qualitative Research Methods
+- Secondary Research
+- Interview
+
+### Quantitative Research Approach
+- Descriptive
+- Causal
+- Correlational research
+
+
+Main
+================================================================================
+
+Vikas Singh {#title}
+--------------------------------------------------------------------------------
+
+### Currently searching for a Position of Data Analyst(Intern)
+
+I am passionate researcher with strong intuitive skills. Currently pursuing my MSc (Big Data and AI for Business) from Montpellier Business School. I am looking for the position of Data Analyst where I can analyzed and visualize  large data sets for delivering solution to the business problem with use of statistical and machine learning techniques using R, Python and STATA.
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+### Montpellier Business School
+
+MSc in Big Data and Artificial Intelligence for Business
+
+Montpellier,France
+
+Jan,2023-Current
+
+### National Institute of Food Technology Entrepreneurship and Management
+
+PhD Food Business Management
+
+Kundli,India
+
+Aug,2013-Feb,2019
+
+Thesis:Structure of Microfinance Institutions and their impact on the Performance of Self-Help Groups: An Empirical Study
+
+### University School of Management, Kurukshetra University
+
+MBA
+
+Kurukshetra,India
+
+May,2007-Jun,2009
+
+Project: Debt Refinancing Scheme of Power Finance Corporation, India 
+
+### University of Delhi
+
+BSc 
+
+New Delhi,India
+
+May,2003-Jun,2009
+
+Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+### Consultant (Data Analyst cum Monitoring & Evaluation Officer)
+
+Department of Food and Public Distribution System, Ministry of Consumer Affairs, GoI
+
+New Delhi,India
+
+Aug,2021-Dec,2022
+
+- Devise strategic monitoring and evaluation plans for all schemes Department of Food and Public Distribution(DoFPD).
+- Performed various analysis Including; Descriptive, Predictive, Causal, Infrential  using, R and Python for 12 schemes of the DoFPD.
+- Developed a time series forecasting model using ARIMA and SARIMA to forecast  procurement and distribution for  DoFPD.
+- Developed indicators based on Output Outcome Framework (OOMF)for monitoring different schemes.-
+- Build Chatbot using Tensorflow and nltk package in Python.
+- Produce maps showing the spatial distribution of ethanol production data using Python.
+- Mentored and guide young professionals
+
+### Health Data Analyst
+
+All India Institute of Medical Sciences
+
+Rishikesh, India
+
+Oct,2020-Dec,2016
+
+- Extract 40,000 observation of national sample survey (NSS) 75th round data using STATA and R.
+- Conduct survival analysis  using R.
+- Summarized , analyzed socio-economic data and performed logistics regression, t-test, Chi-square , cross-tabulation , ANOVA in R.
+
+::: aside
+**PROGRAMMING SKILLS**
+
+```{r ,fig.width=30,fig.height=30}
+dataC <- data.frame(
+  Tools = c("R","Python","Linux", "SQL","Pandas", "Numpy", "ggplot2","plotly",
+            "matplotlib","scikit-learn", "TensorFlow","Rshiny"),
+  Skills = c("Programming","Programming","Programming", "Data processing & wrangling",
+             "Data processing/wrangling", "Data processing & wrangling",
+             "Data visualization", "Data visualization", "Data visualization",
+             "Machine Learning", "Deep Learning", "Model deployment"),
+  Levels = c(4,3.5,2,3,4,2,5,5,3,3,3,4)
+)
+ggplot(dataC, aes(x = Tools, y = Levels, fill = Tools)) +
+  geom_bar(stat = "Identity")+ylim(0,5)+coord_flip()+theme(text = element_text(size = 80))+ theme(legend.position = "none")
+```
+:::
+
+### Research Associate
+
+National Institute of Food Technology Entrepreneurship and Management
+
+Kundli, India
+
+Oct,2019-Oct,2020
+
+- Design and developed survey tool for social entrepreneurship impact assessment in Rshiny.
+- Identfy KPIs using bibliometrics analysis in rstudio.
+- Performed exploratory data analysis and write scientific research articles in journals
+
+
+### Assistant Professor (Ad-Hoc)
+
+Cluster Innovation Centre, University of Delhi
+
+New Delhi,India
+
+Sep,2017-May,2019
+
+- Taught 15+ undergraduate/graduate classes on financial management, macroeconomics,marketing and Use for R in finance.
+- Provided mentorship and supervision to B.Tech. students.
+
+### Research Associate
+
+Indian Institute of Foreign Trade
+
+New Delhi,India
+
+May,2017-Jul,2019
+
+- Collect and analyzed data on international trade, economic, and other regional trends of textile sector.
+- Write reports, policy updates, and issue briefs using quantitative analysis that explained data trends.
+
+::: aside
+**STATISTICAL SKILLS**
+
+```{r,fig.width=10,fig.height=10}
+library(fmsb)
+# Create data: note in High school for Jonathan:
+data2 <- data.frame(
+  row.names = c("Score"),
+  "Ordered L Reg" = 5,
+  "MANOVA" = 5,
+  "PCA" = 5,
+  "MCA" = 5,
+  "Probit Reg" = 4,
+  "ARIMA" = 5,
+  "GARCH" = 4,
+  "Correlation" = 5,
+  "ANFIS" = 5,
+  "K-mean Clustering" = 5,
+  "SVM" = 3,
+  "Factor Analysis" = 5)
+df1 <- data.frame(
+  "Ordered L Reg" = c(5,0), "MANOVA" = c(5,0), "PCA" = c(5,0), "MCA" = c(5,0),
+  "Probit Reg" = c(5,0), "ARIMA" = c(5,0), "GARCH" = c(5,0), "Correlation" = c(5,0), "ANFIS" = c(5,0), "K-mean Clustering" = c(5,0), 
+  "SVM" = c(5,0),"Factor Analysis" = c(5,0))
+
+# Bind the variable ranges to the data
+rownames(df1) <- c("Max", "Min")
+# Bind the variable ranges to the data
+df2 <- rbind(df1,data2)
+Level2 <- df2[c("Max", "Min", "Score"), ]
+rdata1 <- df2[c("Max", "Min", "Score"), ]
+create_beautiful_radarchart <- function(data2, color = "#00AFBB", 
+                                        vlabels = colnames(data2), vlcex = 2,
+                                        caxislabels = NULL, title = NULL, ...){
+  radarchart(
+    data2, axistype = 1,
+    # Customize the polygon
+    pcol = color, pfcol = scales::alpha(color, 0.5), plwd = 2, plty = 1,
+    # Customize the grid
+    cglcol = "grey", cglty = 1, cglwd = 0.8,
+    # Customize the axis
+    axislabcol = "grey", 
+    # Variable labels
+    vlcex = vlcex, vlabels = vlabels,
+    caxislabels = caxislabels, title = title, ...
+  )
+}
+op <- par(mar = c(0, 0,0, 0))
+create_beautiful_radarchart(rdata1, caxislabels = c(1,2,3,4,5))
+par(op)
+```
+:::
+### Lecturer (Guest)
+
+Cluster Innovation Centre, University of Delhi
+
+New Delhi,India
+
+Aug,2016-Apr,2017
+
+- Taught Efficient manufacturing process Production and Operations Management at B. Tech Level.
+
+
+### English Language Facilitator
+
+AAM Foundation
+
+New Delhi,India
+
+Feb,2013-Aug,2013
+
+- Enabled and encouraged students from underprivileged section of society to learn English.
+
+### Accountant
+
+Government Polytechnic
+
+Jhajjar,India
+
+July,2011-Jan,2012
+
+- Maintain all records like Vouchers, Receipts, Bills, and Payments.
+
+### Treasury Solution Analyst
+
+Bank of America Continuum Solution India Limited
+
+Gurugram,India
+
+Feb,2010-Nov,2010
+
+
+- Investigate activities of institutions to enforce banking regulations and ensured the legality of transactions and operations or financial solvency.
+- Reviewed balance sheets, operating income and expense accounts, and loan documentation to confirm institution assets and liabilities.
+- Complete loan applications, including credit analyses and summaries of loan requests, and submitted to loan department for approval.
+
+
+
+Workshops {data-icon=users}
+--------------------------------------------------------------------------------
+
+### Statistical Techniques for Data Analysis 
+
+Department of Physics, Dr. B.R. Ambedkar National Institute of Technology
+
+Jalandhar,India
+
+22/11/2021-26/11/2021
+
+
+::: aside
+**ENGLISH LANGUAGE TEST**
+TOEFL
+88/120
+:::
+
+
+###  Block Chain
+
+Indian Institute of Information Technology
+
+Dharwad,India
+
+2/11/2020-6/11/2020
+
+### Artificial Intelligence 
+
+Indian  Institute  of  Information Technology and Management
+
+Gwalior,India
+
+23/11/2020-27/11/2020
+
+### Machine Learning in Real Time Applications 
+
+National Institute of Technology ,Warangal
+
+Warangal,India
+
+24/08/2020-28/08/2020
+
+### Advanced Optimization Techniques and hands-on with MATLAB/SCILAB(3 credit course)
+
+Ministry  of  Electronics  and  Information Technology (MeitY), Government of India
+
+New Delhi,India
+
+13/06/2020-24/06/2020
+
+
+### Data Science
+
+All India Council for Technical Education
+
+New Delhi,India
+
+20/01/2020-24/01/2020
+
+### Method, Techniques & Analysis of Qualitative Research 
+
+National Institute of Food Technology Entrepreneurship and Management
+
+Kundli,India
+
+17/09/2018-19/09/2018
+
+### TEQIP III Advances in Research Methods and Teaching Pedagogy 
+
+Delhi School of Management at Delhi Technological University
+
+New Delhi,India
+
+18/06/2018-29/06/2018
+
+### Statistical Data Analysis using SPSS
+
+National Institute of Food Technology Entrepreneurship and Management
+
+Kundli,India
+
+28/10/2017-29/10/2017
+
+Certificates {data-icon=certificate}
+--------------------------------------------------------------------------------
+
+### Linux Basics. SQL Computer Vision Natural Langugage Processing
+
+CloudxLab.
+
+New Delhi,India
+
+2023
+
+
+Awards{data-icon=award}
+--------------------------------------------------------------------------------
+
+### National Eligibility Test
+
+University Grant Commission
+
+New Delhi,India
+
+Dec,2015
+
+### Bharat  Ratna  Mother  Teresa  Gold  Medal  Award for  Individual Contribution in Social Services
+
+Global Economic Progress and Research Association
+
+Chhenai, India
+
+Jun,2018
+
+
+
+::: aside
+Disclaimer
+--------------------------------------------------------------------------------
+This resume was made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
+Last updated on `r Sys.Date()`.
+:::
+
